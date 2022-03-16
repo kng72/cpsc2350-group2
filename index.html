@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8" />
+        
+        <!-- CDNs for fonts and other libraries such as jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+        
+        <!-- Stylesheet import -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
+        <!-- Custom Favicon -->
+        <link rel="shortcut icon" type="image/png" href="covid-19.png"/>
+
+        <!-- Website description -->
+        <meta name="description" content="Track COVID situation in the Country you are visiting."></head>
+        
+
+        <title>Covid Tracker</title>
+
+    </head> 
+    <body>
+        <div class="container">
+            <input class="input" id="cityText" type="text" placeholder="Text input">
+
+            <div id="position_container">
+                <div id="country">Country Name</div>
+                <div id="info_container">
+                    <div class="info">
+                        <div id="weather_box">
+                            <span id = "temp">49°</span>
+                            <span id = "day_duration">6 hr</span>
+                            <span id = "cloud_c">56%</span>
+                        </div>
+                        
+                    </div>
+                    <div class="info">Covid Information</div>
+                    <div class="info">Risk Assessment Bar</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="logic.js"></script>
+    </body>
+</html>
+
