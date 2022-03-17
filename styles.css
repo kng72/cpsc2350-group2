@@ -49,6 +49,20 @@ body{
     font-size: 50px;
 }
 
+#weather_box table th{
+    background-color: rgb(231, 241, 141);
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#weather_box table td{
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(244, 250, 195);
+    padding: 10px;
+}
+
 /* #weather_box > *{
     border: 2px solid black;
 } */
