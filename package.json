@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kng72/cpsc2350-group2/issues"
   },
-  "homepage": "https://github.com/kng72/cpsc2350-group2#readme"
+  "homepage": "https://github.com/kng72/cpsc2350-group2#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
