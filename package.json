@@ -18,5 +18,8 @@
   "homepage": "https://github.com/kng72/cpsc2350-group2#readme",
   "devDependencies": {
     "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
