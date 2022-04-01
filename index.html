@@ -7,9 +7,12 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 
-        
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
         <!-- Stylesheet import -->
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="newstyles.css">
 
         <!-- Custom Favicon -->
         <link rel="shortcut icon" type="image/png" href="covid-19.png"/>
@@ -17,27 +20,56 @@
         <!-- Website description -->
         <meta name="description" content="Track COVID situation in the Country you are visiting."></head>
         
-
         <title>Covid Tracker</title>
 
     </head> 
     <body>
         <div class="container">
-            <input class="input" id="cityText" type="text" placeholder="Text input">
+            
+            <img  id="web_background" class="animate__animated animate__fadeIn">
+            <button class="openbtn" onclick="openNav()"><img src="images/left-arrow.png"></img></button>
 
-            <div id="position_container">
-                <div id="country">Country Name</div>
-                <div id="info_container">
-                    <div class="info">
-                        <div id="weather_box">
-                            <span id = "temp">49°</span>
-                            <span id = "day_duration">6 hr</span>
-                            <span id = "cloud_c">56%</span>
+            
+            <div id="foreground_info">
+                <div class="search_quote">
+                    <input class="input" id="cityText" type="text" placeholder="Going somewhere? Enter city..">
+                    <p class="quote">Wherever you go, no matter the weather, always bring your own sunshine.</p>
+                </div>
+                
+                <p id="temp">16°C</p>
+                <p id="city_name">Vancouver</p>
+                <p id="date">Monday, 16 Dec 17'</p>
+                <p id="covid" class="covid_data">Active Cases:<span id="active">653,434</span></p>
+                <p class="covid_data">Recovered:<span id="recovered">653,434</span></p>
+                <p class="covid_data">Deaths:<span id="deaths">653,434</span></p>
+                <div style="margin-top: 20px;" id="advisory_data">
+                    <p class="covid_data">Advisory: <span id="advisory">Canada has a current risk level of 3.8 (out of 5). We advise: Please reconsider your need to travel to Canada.</span></p>
+                    <p class="covid_data">Risk Level:<span id="score">4</span>/5</p>
+                    <p class="covid_data">Last Updated:<span id="last_update">Some Date</span></p>
+                    <p class="covid_data"><a id="covid_source" href="">Source</a></p>
+                </div>
+            </div>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/close.png"></img></a>
+                <div id="position_container" class="hidden">
+                    <div id="info_container">
+                        <p class="weather_head">Weather Details</p>
+                        <div class="info">
+                            <div id="weather_box">
+                                <p>Overall <span id = "overall"></span></p>
+                                <p>Description <span id = "desc"></span></p>
+                                <p>Day Duration <span id = "day_duration"></span></p>
+                                <p>Cloud Coverage <span id = "cloud_c"></span></p>
+                                <p>Feels Like <span id = "feels_like"></span></p>
+                                <p>Temp Min <span id = "minT"></span></p>
+                                <p>Temp Max <span id = "maxT"></span></p>
+                                <p>Pressure <span id = "pressure"></span></p>
+                                <p>Humidity <span id = "humi"></span></p>
+                                <p>Wind Speed <span id = "wndspd"></span></p>
+                                <p>Wind Direction <span id = "wnddir"></span></p>
+                            </div>
                         </div>
-                        
                     </div>
-                    <div class="info">Covid Information</div>
-                    <div class="info">Risk Assessment Bar</div>
                 </div>
             </div>
         </div>
