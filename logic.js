@@ -236,7 +236,7 @@ function getDate(){
 getDate();
 
 function openNav() {
-    document.getElementById("mySidebar").style.width = "20vw";
+    document.getElementById("mySidebar").style.width = "23vw";
 }
 
 function closeNav() {
