@@ -73,7 +73,7 @@ function setWeatherData(overall, desc, feels_like, minT, maxT, pressure, humi, w
     $("#desc").text(desc);
     $("#feels_like").text(Math.round(feels_like - 273.15) + "°C");
     $("#minT").text(minT);
-    $("#maxT").text(maxT);
+    $("#maxT").text(Math.round(maxT - 273.15) + "°C");
     $("#pressure").text(pressure);
     $("#humi").text(humi);
     $("#wndspd").text(wndspd);
