@@ -83,6 +83,7 @@ function setWeatherData(overall, desc, feels_like, minT, maxT, pressure, humi, w
     $("#cloud_c").text(cloud + "%");
 }
 
+
 function setCovidData(active, recovered, deaths){
     if(isNaN(active)){
         active = "no data available";
