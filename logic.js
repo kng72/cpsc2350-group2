@@ -88,10 +88,10 @@ function setCovidData(active, recovered, deaths){
         active = "There is no data for active cases";
     }
     if(isNaN(recovered)){
-        active = "There is no data for recovered cases";
+        recovered = "There is no data for recovered cases";
     }
     if(isNaN(deaths)){
-        active = "There is no data for deaths";
+        deaths = "There is no data for deaths";
     }
     $("#active").text(active);
     $("#recovered").text(recovered);
