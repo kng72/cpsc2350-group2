@@ -85,13 +85,13 @@ function setWeatherData(overall, desc, feels_like, minT, maxT, pressure, humi, w
 
 function setCovidData(active, recovered, deaths){
     if(isNaN(active)){
-        active = "There is no data for active cases";
+        active = "no data available";
     }
     if(isNaN(recovered)){
-        recovered = "There is no data for recovered cases";
+        recovered = "no data available";
     }
     if(isNaN(deaths)){
-        deaths = "There is no data for deaths";
+        deaths = "no data available";
     }
     $("#active").text(active);
     $("#recovered").text(recovered);
