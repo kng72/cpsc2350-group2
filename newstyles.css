@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+.container, html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#web_background{
+    flex:4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:-1px;
+}
+
+#position_container{
+    flex:1;
+    padding: 30px;
+    transition: all 2s linear;
+}
+
+#foreground_info{
+    max-width: 60%;
+    margin: 0;
+    color: white;
+    position: absolute;
+    bottom: 14%;
+    left: 10%;
+    font-size: 2vw;
+    line-height: 1.3;
+    /* background-color: rgba(37, 4, 4, 0.4); */
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.search_quote{
+    margin-bottom: 2vw;
+}
+
+.quote{
+    margin-top: 10px;
+    font-size: 0.8vw;
+}
+
+#foreground_info > *:not(:first-child){
+    margin: 0;
+    color: transparent;
+    -webkit-user-select: none;  
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    
+    -webkit-transition: background-color 300ms linear, color 1s linear;
+    -moz-transition: background-color 300ms linear, color 1s linear;
+    -o-transition: background-color 300ms linear, color 1s linear;
+    -ms-transition: background-color 300ms linear, color 1s linear;
+    transition: background-color 300ms linear, color 1s linear;
+}
+
+::placeholder{
+    color:white;
+    opacity: 0.5;
+}
+
+input:focus::placeholder {
+    color: transparent;
+    -webkit-transition: background-color 100ms linear, color 0.5s linear;
+    -moz-transition: background-color 100ms linear, color 0.5s linear;
+    -o-transition: background-color 100ms linear, color 0.5s linear;
+    -ms-transition: background-color 100ms linear, color 0.5s linear;
+    transition: background-color 100ms linear, color 0.5s linear;
+}
+
+.input{
+    height: 3vw;
+    border-style: none;
+    font-size: 1.8vw;
+    letter-spacing: 2px;
+    outline: none;
+    color:white;
+    width: 80%;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,0.8);
+}
+
+#temp{
+    font-size: 4.5vw;
+    font-weight: 700;
+}
+
+#city_name{
+    font-size: 2.5vw;
+}
+
+#date{
+    font-size: 1.7vw;
+}
+
+.covid_data{
+    font-size: 1.5vw;
+}
+
+#advisory_data *{
+    margin: 0;
+    line-height: 1.3;
+}
+
+#covid_source{
+    text-decoration: underline;
+    color: transparent;
+}
+
+#risk_percent{
+    margin: 0;
+    z-index: 2;
+    color: black;
+}
+
+.progress {
+    margin-top: 20px;
+    display: block;
+    position:relative;
+    color: white;
+    height: 50px;
+}
+.progress:after {
+    
+    content:'\A';
+    position:absolute;
+    background:rgb(150, 126, 126);
+    top:0; 
+    bottom:0;
+    left:0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Right Column of the Page CSS Styling */
+
+#info_container{
+    font-size: 1vw;
+    color:transparent;
+    -webkit-transition: background-color 300ms linear, color 1s linear;
+    -moz-transition: background-color 300ms linear, color 1s linear;
+    -o-transition: background-color 300ms linear, color 1s linear;
+    -ms-transition: background-color 300ms linear, color 1s linear;
+    transition: background-color 300ms linear, color 1s linear;
+}
+
+.weather_head{
+    font-size: 1.2vw;
+    margin: 0;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+}
+
+#weather_box p{
+    margin: 0;
+}
+
+#weather_box p > span{
+    color: white;
+    float: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.visuallyhidden {
+    opacity: 0;
+}
+
+/* Sidebars */
+
+.sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    /* transition: 0.3s; */
+}
+
+.sidebar img{
+    width: 20px;
+    color: white;
+}
+  
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+  
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn img{
+    width: 20px;
+}
+  
+.openbtn:hover {
+    background-color: #444;
+}
+
+#windir img{
+    float: right;
+    transform: rotate(180deg);
+}
+footer{
+    background-color: rgba(75, 56, 56, 1);
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    color: wheat;
+}
+footer p{
+    margin: 0.5vw;
+}
+footer a{
+    color: wheat;
+}
+footer a:hover{
+    color:black;
+}
