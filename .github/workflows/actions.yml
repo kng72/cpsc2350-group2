@@ -30,8 +30,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Deploy to GitHub Pages
-      uses: kng72/github-pages-deploy-action@v4.2.5
+      uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
         branch: main
+        folder: .
 
   
