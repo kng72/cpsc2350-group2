@@ -84,6 +84,15 @@ function setWeatherData(overall, desc, feels_like, minT, maxT, pressure, humi, w
 }
 
 function setCovidData(active, recovered, deaths){
+    if(isNaN(active)){
+        active = "no data available";
+    }
+    if(isNaN(recovered)){
+        recovered = "no data available";
+    }
+    if(isNaN(deaths)){
+        deaths = "no data available";
+    }
     $("#active").text(active);
     $("#recovered").text(recovered);
     $("#deaths").text(deaths);
@@ -182,7 +191,7 @@ function fetchWeather(cityName){
         showWeatherBlock();
         blockTrigger();
         imageSearch(cityName);
-
+        changeWindAngle(windir);
         setCityName(cityName);
         travelAdvisory(obj["sys"]["country"]);
         let countryName = obj["sys"]["country"];
@@ -199,6 +208,7 @@ function setCityName(cityName){
 }
 
 function showWeatherBlock(){
+    $("#foreground_info").css("background-color", "rgba(37, 4, 4, 0.4)");	
     $("#foreground_info > *:not(:first-child)").css("color", "white");
     // $("#position_container").css("display", "block");
     $("#covid_source").css("color", "white");
@@ -241,4 +251,8 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
+}
+
+function changeWindAngle(angle){
+    $("#windir img").css("transform", `rotate(${angle}deg)`);
 }
