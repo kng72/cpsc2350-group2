@@ -191,7 +191,7 @@ function fetchWeather(cityName){
         showWeatherBlock();
         blockTrigger();
         imageSearch(cityName);
-
+        changeWindAngle(windir);
         setCityName(cityName);
         travelAdvisory(obj["sys"]["country"]);
         let countryName = obj["sys"]["country"];
@@ -208,6 +208,7 @@ function setCityName(cityName){
 }
 
 function showWeatherBlock(){
+    $("#foreground_info").css("background-color", "rgba(37, 4, 4, 0.4)");	
     $("#foreground_info > *:not(:first-child)").css("color", "white");
     // $("#position_container").css("display", "block");
     $("#covid_source").css("color", "white");
@@ -250,4 +251,8 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
+}
+
+function changeWindAngle(angle){
+    $("#windir img").css("transform", `rotate(${angle}deg)`);
 }
